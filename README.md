@@ -20,7 +20,11 @@ The current V3 model (Random Forest Classifier) identified key trends in the 202
 ### 1. Clone the Repository
 ```bash
 git clone https://github.com/GlenHan/F1_Predictor.git
+<<<<<<< HEAD
 cd YOUR_REPO_NAME
+=======
+cd F1_Predictor
+>>>>>>> 8840e7e (Polished README, fixed notebook bugs, and updated script)
 ```
 
 2. Install Dependencies
@@ -34,6 +38,7 @@ python3 predict_2026.py
 ```
 
 ## 📂 File Structure
+<<<<<<< HEAD
 predict_2026.py: The production script. Contains the dictionary maps for 2026 teams/drivers and runs the prediction engine.
 
 f1_model_v3_multiyear.pkl: The pre-trained Random Forest model (serialized).
@@ -41,10 +46,23 @@ f1_model_v3_multiyear.pkl: The pre-trained Random Forest model (serialized).
 f1_model_training_analysis.ipynb: The research notebook containing data extraction, cleaning, feature engineering, and training visualizations.
 
 f1_data_2023_2025_encoded.csv: The processed dataset used for training.
+=======
+*`predict_2026.py`: The production script. Contains the dictionary maps for 2026 teams/drivers and runs the prediction engine.
+
+*`f1_model_v3_multiyear.pkl`: The pre-trained Random Forest model (serialized).
+
+*`f1_model_training_analysis.ipynb`: The research notebook containing data extraction, cleaning, feature engineering, and training visualizations.
+
+*`f1_data_2023_2025_encoded.csv`: The processed dataset used for training.
+>>>>>>> 8840e7e (Polished README, fixed notebook bugs, and updated script)
 
 ## 🔮 Future Improvements
 Weather Data integration: Fetching historical rain data to predict wet races.
 
 Tyre Strategy: Incorporating compound choices (Soft/Medium/Hard) into the model.
 
+<<<<<<< HEAD
 Created by Glen Han
+=======
+Created by Glen Han
+>>>>>>> 8840e7e (Polished README, fixed notebook bugs, and updated script)
