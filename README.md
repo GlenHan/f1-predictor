@@ -33,7 +33,7 @@ pip install -r requirements.txt
 python3 predict_2026.py
 ```
 
-##📂 File Structure
+## 📂 File Structure
 predict_2026.py: The production script. Contains the dictionary maps for 2026 teams/drivers and runs the prediction engine.
 
 f1_model_v3_multiyear.pkl: The pre-trained Random Forest model (serialized).
@@ -42,7 +42,7 @@ f1_model_training_analysis.ipynb: The research notebook containing data extracti
 
 f1_data_2023_2025_encoded.csv: The processed dataset used for training.
 
-##🔮 Future Improvements
+## 🔮 Future Improvements
 Weather Data integration: Fetching historical rain data to predict wet races.
 
 Tyre Strategy: Incorporating compound choices (Soft/Medium/Hard) into the model.
