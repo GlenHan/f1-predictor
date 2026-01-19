@@ -1,19 +1,45 @@
-# F1 Podium Predictor: A Machine Learning Journey 🏎️
+# 🏎️ Formula 1 Race Predictor (2026 Ready)
 
-## 📝 Project Inspiration
-While preparing for the start of the 2026 Formula 1 season, I was inspired by a project by Mar Antaya on TikTok. This project serves as a bridge between my academic studies in **Business Analytics** and my passion for motorsport. It allows me to apply classroom concepts—such as data cleaning and statistical analysis—to a high-stakes, real-world data environment.
+A Machine Learning project that predicts Formula 1 podium probabilities. Built with **Python**, **Scikit-Learn**, and **FastF1**, this model is trained on race data from 2023-2025 to forecast the 2026 season.
 
-## 🎯 Project Goals
-The primary objective is to build a predictive model that determines **Podium Finishes (Top 3)** based on qualifying performance and historical driver/constructor data.
+## 🚀 Key Features
+* **Multi-Season "Veteran" Model:** Trained on 3 years of data (2023-2025) to capture driver performance across different car generations.
+* **2026 Season Ready:** Includes a custom translation layer to handle:
+    * **New Teams:** Maps *Audi* to Sauber history and *Cadillac* to midfield proxies.
+    * **Rookies:** Maps rookie *Arvid Lindblad* to teammate benchmarks (Liam Lawson) for realistic predictions.
+    * **Rebrands:** Correctly distinguishes between *Red Bull Racing* (Verstappen) and *VCARB/RB* (Lawson).
+* **Circuit-Specific Logic:** The model distinguishes between **Street Tracks** (e.g., Monaco, Singapore) and **Traditional Circuits** to account for specific car characteristics.
 
-**The Roadmap:**
-1. **Phase 1:** Predict Top 3 finishers using current season qualifying data.
-2. **Phase 2:** Iterate and refine the model as the 2026 season progresses to increase complexity.
-3. **Phase 3:** Expand predictions to the **Top 10 (Point Scorers)** as the dataset grows and model accuracy improves.
+## 📊 Model Performance & Insights
+The current V3 model (Random Forest Classifier) identified key trends in the 2024/2025 data:
+* **The "Street Track" Bias:** The model correctly identifies that Red Bull's probability drops on street circuits due to ride-height issues, while McLaren's probability increases.
+* **Qualifying Importance:** Grid position remains the single highest predictor of podium success (approx. 80% correlation).
 
-## 📊 Data & Tools
-- **Data Source:** [FastF1 API](https://github.com/theOehrly/Fast-F1) for telemetry, lap times, and historical results.
-- **Tech Stack:** Python (Pandas, Scikit-Learn), VS Code, and GitHub for version control.
-- **Focus Areas:** Feature Engineering, Binary Classification, and Model Evaluation.
+## 🛠️ Installation & Usage
 
----
+### 1. Clone the Repository
+```bash
+git clone https://github.com/GlenHan/F1_Predictor.git
+cd YOUR_REPO_NAME ```
+
+2. Install Dependencies
+pip install -r requirements.txt
+
+3. Run the 2026 Predictor
+python3 predict_2026.py
+
+📂 File Structure
+predict_2026.py: The production script. Contains the dictionary maps for 2026 teams/drivers and runs the prediction engine.
+
+f1_model_v3_multiyear.pkl: The pre-trained Random Forest model (serialized).
+
+f1_model_training_analysis.ipynb: The research notebook containing data extraction, cleaning, feature engineering, and training visualizations.
+
+f1_data_2023_2025_encoded.csv: The processed dataset used for training.
+
+🔮 Future Improvements
+Weather Data integration: Fetching historical rain data to predict wet races.
+
+Tyre Strategy: Incorporating compound choices (Soft/Medium/Hard) into the model.
+
+Created by Glen Han
